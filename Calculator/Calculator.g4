@@ -28,17 +28,17 @@ value       : '(' expression ')' | NUMBER | IDENTIFIER
 ** Lexer Rules
 */
 
-NUMBER     : DIGIT+
-           ;
+fragment LETTER : [a-zA-Z]
+                ;
 
-IDENTIFIER : LETTER ( LETTER | DIGIT )*
-           ;
+fragment DIGIT  : [0-9]
+                ;
 
-LETTER     : [a-zA-Z]
-           ; 
+NUMBER      : DIGIT+
+            ;
 
-DIGIT      : [0-9]
-           ; 
+IDENTIFIER  : LETTER ( LETTER | DIGIT )*
+            ;
 
-WHITESPACE : [ \t\r\n]+ -> skip // skip spaces, tabs, newlines
-           ;
+WHITESPACE  : [ \t\r\n]+ -> skip // skip spaces, tabs, newlines
+            ;

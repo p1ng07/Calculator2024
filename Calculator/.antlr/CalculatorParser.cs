@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from ./Calculator.g4 by ANTLR 4.13.1
+// Generated from c:/Academics/Compilers/2024/Calculator2024/Calculator/Calculator.g4 by ANTLR 4.13.1
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -96,22 +96,6 @@ public partial class CalculatorParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_computation; } }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ICalculatorListener typedListener = listener as ICalculatorListener;
-			if (typedListener != null) typedListener.EnterComputation(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ICalculatorListener typedListener = listener as ICalculatorListener;
-			if (typedListener != null) typedListener.ExitComputation(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ICalculatorVisitor<TResult> typedVisitor = visitor as ICalculatorVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitComputation(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
@@ -159,22 +143,6 @@ public partial class CalculatorParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_assignment; } }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ICalculatorListener typedListener = listener as ICalculatorListener;
-			if (typedListener != null) typedListener.EnterAssignment(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ICalculatorListener typedListener = listener as ICalculatorListener;
-			if (typedListener != null) typedListener.ExitAssignment(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ICalculatorVisitor<TResult> typedVisitor = visitor as ICalculatorVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitAssignment(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
@@ -215,22 +183,6 @@ public partial class CalculatorParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_expression; } }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ICalculatorListener typedListener = listener as ICalculatorListener;
-			if (typedListener != null) typedListener.EnterExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ICalculatorListener typedListener = listener as ICalculatorListener;
-			if (typedListener != null) typedListener.ExitExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ICalculatorVisitor<TResult> typedVisitor = visitor as ICalculatorVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitExpression(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
@@ -322,22 +274,6 @@ public partial class CalculatorParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_term; } }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ICalculatorListener typedListener = listener as ICalculatorListener;
-			if (typedListener != null) typedListener.EnterTerm(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ICalculatorListener typedListener = listener as ICalculatorListener;
-			if (typedListener != null) typedListener.ExitTerm(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ICalculatorVisitor<TResult> typedVisitor = visitor as ICalculatorVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitTerm(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
@@ -426,22 +362,6 @@ public partial class CalculatorParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_factor; } }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ICalculatorListener typedListener = listener as ICalculatorListener;
-			if (typedListener != null) typedListener.EnterFactor(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ICalculatorListener typedListener = listener as ICalculatorListener;
-			if (typedListener != null) typedListener.ExitFactor(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ICalculatorVisitor<TResult> typedVisitor = visitor as ICalculatorVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitFactor(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
@@ -496,22 +416,6 @@ public partial class CalculatorParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_value; } }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ICalculatorListener typedListener = listener as ICalculatorListener;
-			if (typedListener != null) typedListener.EnterValue(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ICalculatorListener typedListener = listener as ICalculatorListener;
-			if (typedListener != null) typedListener.ExitValue(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ICalculatorVisitor<TResult> typedVisitor = visitor as ICalculatorVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitValue(this);
-			else return visitor.VisitChildren(this);
-		}
 	}
 
 	[RuleVersion(0)]
