@@ -2,6 +2,7 @@
 {
     public class CalculatorEngine : CalculatorBaseVisitor<double>
     {
+        private static Dictionary<String, Int32> variables = new Dictionary<string, int>();
 
         public override double VisitComputation( CalculatorParser.ComputationContext context )
         {
@@ -15,6 +16,13 @@
 
         public override double VisitAssignment( CalculatorParser.AssignmentContext context )
         {
+            if (context.ChildCount == 3)
+            {
+                var variableName = context.GetChild(0).GetText();
+                var variableValue = Int32.Parse(context.GetChild(2).GetText());                
+                
+                variables.Add(variableName, variableValue);
+            }
             // 1. DETERMINE THE VARIABLE NAME
             // 2. DETERMINE THE VALUE OF THE EXPRESSION
             // 3. STORE THE VALUE IN THE VARIABLE 
@@ -80,6 +88,7 @@
                 {
                     var lexeme = context.IDENTIFIER().GetText();
                     // RETURN THE CURRENT VALUE OF THE VARIABLE
+                    return variables[lexeme];
                 }
             }
             else
