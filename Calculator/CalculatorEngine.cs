@@ -2,7 +2,7 @@
 {
     public class CalculatorEngine : CalculatorBaseVisitor<double>
     {
-        private static Dictionary<String, Int32> variables = new Dictionary<string, int>();
+        private static Dictionary<String, double> variables = new Dictionary<string, double>();
 
         public override double VisitComputation( CalculatorParser.ComputationContext context )
         {
@@ -16,17 +16,20 @@
 
         public override double VisitAssignment( CalculatorParser.AssignmentContext context )
         {
-            if (context.ChildCount == 3)
+            if (context.ChildCount > 2)
             {
                 var variableName = context.GetChild(0).GetText();
-                var variableValue = Int32.Parse(context.GetChild(2).GetText());                
-                
-                variables.Add(variableName, variableValue);
+                context.children.RemoveAt(0);
+                context.children.RemoveAt(0);
+                var variableValue = Visit(context);
+                variables[variableName] = variableValue;
+                // 1. DETERMINE THE VARIABLE NAME
+                // 2. DETERMINE THE VALUE OF THE EXPRESSION
+                // 3. STORE THE VALUE IN THE VARIABLE 
+                return variableValue;
             }
-            // 1. DETERMINE THE VARIABLE NAME
-            // 2. DETERMINE THE VALUE OF THE EXPRESSION
-            // 3. STORE THE VALUE IN THE VARIABLE 
-            return base.VisitAssignment( context );
+
+            return base.VisitAssignment(context);
         }
 
         public override double VisitExpression( CalculatorParser.ExpressionContext context )
